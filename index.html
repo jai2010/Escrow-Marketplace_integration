@@ -70,20 +70,105 @@ As part of account creation, we perform comprehensive KYC check on the user befo
 
 <p>URI: /accounts</p>
 
-<p>Parameters:
-Parameter | Type | Required? | Description
------------- | ------------- | ------------ | -------------
-company | string | optional | The name of the company (will use the user_name if none supplied)
-user_name|string|required|The name of a contact at the company
-user_email|string|required|The contact's email address
-user_phone|string|required|The contact's phone number. Formatted with a plus sign, followed by the international dialing code, followed by a space, followed by the phone number (e.g. "+1 5551234567")
-address|string|required|The company mailing street address
-city|string|required|The mailing address city
-state|string|required|The mailing address state/province (for US and Canadian addresses, use the 2-letter abbreviation for the state/province)
-postal_code|string|required |The mailing address zip/postal code
-country|string|required|The mailing address country (2-letter ISO country code)
-email_confirmed|bool|optional|Has the user email address already been confirmed?
-agreed_terms|bool|optional|Has the user agreed to the Armor Payments terms and conditions?</p>
+<p>Parameters:</p>
+
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content from cell 1</td>
+<td>Content from cell 2</td>
+</tr>
+<tr>
+<td>Content in the first column</td>
+<td>Content in the second column</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>company</td>
+<td>string</td>
+<td>optional</td>
+<td>The name of the company (will use the user_name if none supplied)</td>
+</tr>
+<tr>
+<td>user_name</td>
+<td>string</td>
+<td>required</td>
+<td>The name of a contact at the company</td>
+</tr>
+<tr>
+<td>user_email</td>
+<td>string</td>
+<td>required</td>
+<td>The contact's email address</td>
+</tr>
+<tr>
+<td>user_phone</td>
+<td>string</td>
+<td>required</td>
+<td>The contact's phone number. Formatted with a plus sign, followed by the international dialing code, followed by a space, followed by the phone number (e.g. "+1 5551234567")</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>required</td>
+<td>The company mailing street address</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td>required</td>
+<td>The mailing address city</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td>required</td>
+<td>The mailing address state/province (for US and Canadian addresses, use the 2-letter abbreviation for the state/province)</td>
+</tr>
+<tr>
+<td>postal_code</td>
+<td>string</td>
+<td>required</td>
+<td>The mailing address zip/postal code</td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>required</td>
+<td>The mailing address country (2-letter ISO country code)</td>
+</tr>
+<tr>
+<td>email_confirmed</td>
+<td>bool</td>
+<td>optional</td>
+<td>Has the user email address already been confirmed?</td>
+</tr>
+<tr>
+<td>agreed_terms</td>
+<td>bool</td>
+<td>optional</td>
+<td>Has the user agreed to the Armor Payments terms and conditions?</td>
+</tr>
+</tbody>
+</table>
 
 <p>What is the difference between account &amp; user?
 • Account represents a company. Learn more
