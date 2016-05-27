@@ -1,4 +1,4 @@
-# Integrate Secure Escrow Payments into an Online Marketplace
+# Integrate Secure Escrow Payments in a Online Marketplace
 
 ## Overview
 
@@ -9,21 +9,29 @@ Payoneer Escrow APIs makes it easy to integrate secure escrow payments into a ma
 
 ## Scenario 
 Your marketplace is focused on buying and selling electronic goods. Sellers register with your site and list items for sale. Buyers search and browse, and reach out to your sellers for quotation & the purchase (payment) of items happen outside your website. 
+
 You are considering offering payment capability in your marketplace for your buyers and sellers to manage end to end purchase process. Criteria’s important for you to enable payments on your website are…
-•	Secure escrow payments to eliminate the risk of fraud 
-•	Licensed payment provider to process & hold payments safely
-•	Track shipments 
-•	Handle dispute between buyer & seller
-•	Transfer payments quickly to seller
+
+* Secure escrow payments to eliminate the risk of fraud 
+* Licensed payment provider to process & hold payments safely
+* Track shipments 
+* Handle dispute between buyer & seller
+* Transfer payments quickly to seller
+
 All in all, you want a service provider who can help you with offering a simple & secure escrow payment service to users on your marketplace while you focus on offering the best user experience to your users.
-Simple Approach
+
+## Simple Approach
 To get up and running quickly, you decide that for your first version you'll leverage the Payoneer Escrow user interface as much as possible.
-1. Seller setup
+
+### Seller setup
 You will have to create an account for your seller & also setup their payout preference on Payoneer before they can participate in an escrow transaction. During account creation, Payoneer conducts a comprehensive KYC check before approving the user to use escrow. We recommend you to add seller escrow setup to your onboarding process to eliminate RISKY sellers on your marketplace by leveraging our KYC checks for account approval.
-Create a seller account
+
+#### Create a seller account
 You can POST the partner details to accounts resource in Payoneer escrow API set to create an account for the seller. This also creates a user for that account. 
+
 As part of account creation, we perform comprehensive KYC check on the user before enabling escrow for the user. KYC process involves checking the user against OFAC sanctioned list, etc…. [jai to update]
 URI: /accounts
+
 Parameters:
 Type
 Parameter
