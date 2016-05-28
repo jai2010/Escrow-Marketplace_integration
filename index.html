@@ -202,7 +202,29 @@
 <p>Now that you have created an account for the seller, you can setup the seller to enable escrow &amp; also their payout preference.</p>
 
 <h4>
-<a id="12-seller-enable-escrow--setup-payout-preference" class="anchor" href="#12-seller-enable-escrow--setup-payout-preference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.2 Seller: Enable escrow &amp; setup payout preference</h4>
+<a id="12-lookup-users-on-the-new-seller-account" class="anchor" href="#12-lookup-users-on-the-new-seller-account" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.2 Lookup users on the new seller account</h4>
+
+<p>You can GET the user linked to the seller account by passing the account details to accounts resource in Payoneer escrow API. </p>
+
+<p>URI: /accounts//users
+<em>Ex: /accounts/290465/users</em> where 290465 is the account id of the seller.</p>
+
+<p><strong>Sample Return</strong></p>
+
+<pre><code>[     
+    {         
+        "user_id": 17792,         
+        "account_id": 290465,         
+        "name": "John Doe",         
+        "email": "j.doe@example.com",         
+        "phone": "+1 123-555-1234",         
+        "confirmed": true,         
+        "agreed_terms": "2013-11-28T23:19:42+00:00",         
+        "created": "2013-11-28T23:19:42+00:00",         
+        "uri": "/accounts/290465/users/17792"     
+    } 
+]
+</code></pre>
       </section>
     </div>
     <footer>
