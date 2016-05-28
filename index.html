@@ -6,21 +6,20 @@
     <title>Marketplace by jai2010</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="without-description">
         <h1>Marketplace</h1>
         <p></p>
-
         <p class="view"><a href="https://github.com/jai2010/marketplace">View the Project on GitHub <small>jai2010/marketplace</small></a></p>
-
-
         <ul>
           <li><a href="https://github.com/jai2010/marketplace/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/jai2010/marketplace/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -300,12 +299,12 @@
 
 <p>Escrow order can be created by POSTing the order details to Payoneer order API resource. <a href="http://www.armorpayments.com/api/classes/ArmorPayments.Api.Resource.Orders.html">Learn more about Payoneer Order resource</a></p>
 
-<p><strong>Sample URI</strong>: /accounts/290465/orders</p>
+<p><strong>Sample URI</strong>: /accounts/290465/orders
+<em>290465 is the account id of seller</em></p>
 
-<p><em>290465 is the account id of seller</em></p>
+<p><strong>Sample Parameters</strong></p>
 
-<pre><code>**Sample Parameters**
-{     
+<pre><code>{     
     "type": 1,     
     "seller_id": 17792, //seller_id is the user id of seller    
     "buyer_id": 29338,  //buyer_id is the user id of buyer 
@@ -341,12 +340,12 @@
 }
 </code></pre>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/jai2010">jai2010</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/jai2010">jai2010</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>
