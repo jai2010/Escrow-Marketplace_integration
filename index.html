@@ -292,6 +292,52 @@
 
 <h3>
 <a id="2-create-order" class="anchor" href="#2-create-order" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Create Order</h3>
+
+<p>Once the seller has enabled escrow &amp; setup their payout preference, seller is ready to accept secure escrow payments from buyers. </p>
+
+<p>To create a secure escrow order on Payoneer, you will require Payoneer account for buyer as well. We recommend you to create an account for the buyer when the buyer or seller is ready to create an escrow order. <a href="http://jai2010.github.io/marketplace/#11-create-a-seller-account">Click here</a> learn more about how to create a Buyer account.</p>
+
+<p>Escrow order can be created by POSTing the order details to Payoneer order API resource. <a href="http://www.armorpayments.com/api/classes/ArmorPayments.Api.Resource.Orders.html">Learn more about Payoneer Order resource</a></p>
+
+<p>Sample URI: /accounts/290465/orders
+<em>290465 is the account id of seller</em></p>
+
+<pre><code>**Sample Parameters**
+{     
+    "type": 1,     
+    "seller_id": 17792, //seller_id is the user id of seller    
+    "buyer_id": 29338,  //buyer_id is the user id of buyer 
+    "amount": 10000,     
+    "summary": "Example Goods Order",     
+    "description": "An escrow for goods order for use as an example.",     
+    "invoice_num": "12345",     
+    "purchase_order_num": "67890",     
+    "message": "Hello, Example Buyer! Thank you for your example goods order."  
+}
+</code></pre>
+
+<p><strong>Sample Return</strong></p>
+
+<pre><code>{     
+    "order_id": 1401028714,     
+    "account_id": 290465,     
+    "seller_id": 17792, //seller_id is the user id of seller  
+    "buyer_account_id": 452981,     
+    "buyer_id": 29338,  //buyer_id is the user id of buyer  
+    "type": 1,     
+    "status": 1,     
+    "amount": 10000,     
+    "balance": 0,     
+    "available_balance": 0,     
+    "summary": "Example Goods Order",     
+    "description": "An escrow for goods order for use as an example.",     
+    "invoice_num": "12345",     
+    "purchase_order_num": "67890",     
+    "status_change": "2014-01-02T20:48:27+00:00",     
+    "created": "2014-01-02T20:48:27+00:00",     
+    "uri": "/accounts/290465/orders/1401028714" 
+}
+</code></pre>
       </section>
     </div>
     <footer>
