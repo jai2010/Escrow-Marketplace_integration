@@ -233,6 +233,30 @@
 <p>Now that you have the account created for seller, you need to enable escrow for the seller on Payoneer &amp; also setup their payout preference to withdraw their payments from escrow. </p>
 
 <p>Escrow setup &amp; Payout preference will be done on Payoneer interface (modal boxes) so you need to generate an Payoneer authenticated URL to direct the user through an iFrame. <a href="http://www.armorpayments.com/api/classes/ArmorPayments.Api.Resource.Authentications.html">Learn more about Payoneer Authentication</a></p>
+
+<p><strong>Sample URI</strong> /accounts/290465/users/17792/authentications
+<em>(290465 is the seller account id &amp; 17792 is the seller user id)</em></p>
+
+<p><strong>Sample Parameters</strong></p>
+
+<pre><code>{     
+    "uri": "/accounts/290465/bankaccounts",     
+    "action": "create" 
+}
+</code></pre>
+
+<p><strong>Sample Return</strong></p>
+
+<pre><code>{     
+    "user_id": 17792,     
+    "account_id": 290465,     
+    "uri": "/accounts/290465/bankaccounts",     
+    "action": "create",     
+    "url": "https://app.armorpayments.com/accounts/290465/bankaccounts?action=create&amp;user_auth_token=fa7c6352d60b2128b91767ee5b6a32e7",     
+    "created": "2014-07-21T22:26:52-05:00",     
+    "expires": "2014-07-21T23:26:52-05:00" 
+}
+</code></pre>
       </section>
     </div>
     <footer>
