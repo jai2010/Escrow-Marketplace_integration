@@ -11,9 +11,11 @@
   </head>
   <body>
     <section class="page-header">
-      <p class="project-tagline">Payoneer Escrow Payments</p>
-      <h1 class="project-name">Integrate Escrow Payments into a online marketplace</h1>
-
+      <h1 class="project-name">Payoneer Escrow Payments</h1>
+      <h2 class="project-tagline">Integrate Escrow Payments into a online marketplace</h2>
+      <a href="https://github.com/jai2010/Escrow-Marketplace_integration" class="btn">View on GitHub</a>
+      <a href="https://github.com/jai2010/Escrow-Marketplace_integration/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jai2010/Escrow-Marketplace_integration/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
@@ -265,7 +267,7 @@
 
 <p><strong>NOTE</strong>: We recommend you to always point to javascript link on Payoneer website &amp; not host it on your website. We constantly add features &amp; fix bugs which gets pushed to the javascript on Payoneer website.</p>
 
-<p><strong>What seller needs to do in modal box?</strong></p>
+<p><strong>What seller does in the Payoneer iFrame?</strong></p>
 
 <p>Seller needs to agree to Payoneer escrow terms to enable escrow &amp; also configure the payment methods eligible for buyer to transfer funds into escrow.</p>
 
@@ -357,6 +359,17 @@
     <span class="pl-s"><span class="pl-pds">"</span>created<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2014-07-21T22:26:52-05:00<span class="pl-pds">"</span></span>,     
     <span class="pl-s"><span class="pl-pds">"</span>expires<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2014-07-21T23:26:52-05:00<span class="pl-pds">"</span></span> 
 }</pre></div>
+
+<p>Use the returned URL to display an iFrame to the user. As mentioned in the earlier section, you need to display the iFrame using javascript on Payoneer server &amp; not self host it.</p>
+
+<p><strong>What buyer does in the Payoneer iFrame?</strong>
+Buyer can transfer funds into escrow using Bank Transfer(ACH), Domestic or International Wire, Electronic Check, Credit Card. Payment methods will be enabled for the buyer based on the eligibility criteria below...</p>
+
+<ul>
+<li>Credit Card will be enabled only for escrow orders less than or equal to $2000</li>
+<li>Domestic Wire transfer &amp; Electronic Check will be enabled only for US buyers</li>
+<li>International Wire Transfer will be enabled for non-US buyers.</li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/jai2010/Escrow-Marketplace_integration">Payoneer Escrow Payments</a> is maintained by <a href="https://github.com/jai2010">jai2010</a>.</span>
