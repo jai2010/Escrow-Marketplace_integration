@@ -257,6 +257,26 @@
     "expires": "2014-07-21T23:26:52-05:00" 
 }
 </code></pre>
+
+<p>Now you can display the URL returned in a modalbox on your marketplace for the seller to enable escrow &amp; setup their payout preference. </p>
+
+<pre><code>&lt;!-- The Armor Payments lightbox JS requires jQuery. If your site already includes jQuery, omit this line --&gt; 
+&lt;script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"&gt;&lt;/script&gt; 
+
+&lt;!-- Sandbox environment? Use this script: --&gt; 
+&lt;script src="https://sandbox.armorpayments.com/assets/js/modal.min.js" type="text/javascript"&gt;&lt;/script&gt; 
+
+&lt;!-- Production environment? Use this script: --&gt; 
+&lt;!-- &lt;script src="https://app.armorpayments.com/assets/js/modal.min.js" type="text/javascript"&gt;&lt;/script&gt; --&gt; 
+
+&lt;script type="text/javascript"&gt;     
+// Use the URL returned from the /authentications request     
+    var url = "https://app.armorpayments.com/accounts/290465/bankaccounts?action=create&amp;user_auth_token=fa7c6352d60b2128b91767ee5b6a32e7";     
+    armor.openModal(url); 
+&lt;/script&gt;
+</code></pre>
+
+<p>We recommend you to always point the javascript link on Payoneer website &amp; not host it on your website to make use of the latest changes we push</p>
       </section>
     </div>
     <footer>
