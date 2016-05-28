@@ -1,33 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Payoneer Escrow Payments by jai2010</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Payoneer Escrow Payments</h1>
-        <p>Integrate Escrow Payments into a online marketplace</p>
-        <p class="view"><a href="https://github.com/jai2010/Escrow-Marketplace_integration">View the Project on GitHub <small>jai2010/Escrow-Marketplace_integration</small></a></p>
-        <ul>
-          <li><a href="https://github.com/jai2010/Escrow-Marketplace_integration/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/jai2010/Escrow-Marketplace_integration/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/jai2010/Escrow-Marketplace_integration">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h2>
+    <section class="page-header">
+      <h1 class="project-name">Payoneer Escrow Payments</h1>
+      <h2 class="project-tagline">Integrate Escrow Payments into a online marketplace</h2>
+      <a href="https://github.com/jai2010/Escrow-Marketplace_integration" class="btn">View on GitHub</a>
+      <a href="https://github.com/jai2010/Escrow-Marketplace_integration/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jai2010/Escrow-Marketplace_integration/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h2>
 
 <p>Payoneer Escrow APIs makes it easy to integrate secure escrow payments into a marketplace. In this section, you'll see how to:</p>
@@ -301,41 +293,39 @@
 
 <p><strong>Sample Parameters</strong></p>
 
-<pre><code>{     
-    "type": 1,     
-    "seller_id": 17792, //seller_id is the user id of seller    
-    "buyer_id": 29338,  //buyer_id is the user id of buyer 
-    "amount": 10000,     
-    "summary": "Example Goods Order",     
-    "description": "An escrow for goods order for use as an example.",     
-    "invoice_num": "12345",     
-    "purchase_order_num": "67890",     
-    "message": "Hello, Example Buyer! Thank you for your example goods order."  
-}
-</code></pre>
+<div class="highlight highlight-source-js"><pre>{     
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>seller_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">17792</span>, <span class="pl-c">//seller_id is the user id of seller    </span>
+    <span class="pl-s"><span class="pl-pds">"</span>buyer_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">29338</span>,  <span class="pl-c">//buyer_id is the user id of buyer </span>
+    <span class="pl-s"><span class="pl-pds">"</span>amount<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">10000</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>summary<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Example Goods Order<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>description<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>An escrow for goods order for use as an example.<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>invoice_num<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>12345<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>purchase_order_num<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>67890<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>message<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Hello, Example Buyer! Thank you for your example goods order.<span class="pl-pds">"</span></span>  
+}</pre></div>
 
 <p><strong>Sample Return</strong></p>
 
-<pre><code>{     
-    "order_id": 1401028714,     
-    "account_id": 290465,     
-    "seller_id": 17792, //seller_id is the user id of seller  
-    "buyer_account_id": 452981,     
-    "buyer_id": 29338,  //buyer_id is the user id of buyer  
-    "type": 1,     
-    "status": 1,     
-    "amount": 10000,     
-    "balance": 0,     
-    "available_balance": 0,     
-    "summary": "Example Goods Order",     
-    "description": "An escrow for goods order for use as an example.",     
-    "invoice_num": "12345",     
-    "purchase_order_num": "67890",     
-    "status_change": "2014-01-02T20:48:27+00:00",     
-    "created": "2014-01-02T20:48:27+00:00",     
-    "uri": "/accounts/290465/orders/1401028714" 
-}
-</code></pre>
+<div class="highlight highlight-source-js"><pre>{     
+    <span class="pl-s"><span class="pl-pds">"</span>order_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1401028714</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>account_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">290465</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>seller_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">17792</span>, <span class="pl-c">//seller_id is the user id of seller  </span>
+    <span class="pl-s"><span class="pl-pds">"</span>buyer_account_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">452981</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>buyer_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">29338</span>,  <span class="pl-c">//buyer_id is the user id of buyer  </span>
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>amount<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">10000</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>balance<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>available_balance<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>summary<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Example Goods Order<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>description<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>An escrow for goods order for use as an example.<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>invoice_num<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>12345<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>purchase_order_num<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>67890<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>status_change<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>2014-01-02T20:48:27+00:00<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>created<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>2014-01-02T20:48:27+00:00<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>uri<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>/accounts/290465/orders/1401028714<span class="pl-pds">"</span></span> 
+}</pre></div>
 
 <hr>
 
@@ -346,47 +336,47 @@
 
 <p><strong>API Resource</strong>: <a href="http://www.armorpayments.com/api/classes/ArmorPayments.Api.Resource.Authentications.html">POST authentications</a></p>
 
-<p><strong>Sample URI</strong>:  /accounts/452981/users/29338/authentications</p>
-
-<p><em>(452981 is the account id &amp; 29338 is the user id of buyer)</em></p>
+<p><strong>Sample URI</strong>:  /accounts/452981/users/29338/authentications
+<em>(452981 is the account id &amp; 29338 is the user id of buyer)</em></p>
 
 <p><strong>Sample Parameters</strong></p>
 
-<div class="highlight highlight-source-json"><pre>{     
-    <span class="pl-s"><span class="pl-pds">"</span>uri<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>/accounts/290465/orders/1401028714/paymentinstructions<span class="pl-pds">"</span></span>,     
-    <span class="pl-s"><span class="pl-pds">"</span>action<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>view<span class="pl-pds">"</span></span> 
+<div class="highlight highlight-source-js"><pre>{     
+    <span class="pl-s"><span class="pl-pds">"</span>uri<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>/accounts/290465/orders/1401028714/paymentinstructions<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>action<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>view<span class="pl-pds">"</span></span> 
 }</pre></div>
 
 <p><strong>Sample Return</strong></p>
 
-<div class="highlight highlight-source-json"><pre>{     
-    <span class="pl-s"><span class="pl-pds">"</span>user_id<span class="pl-pds">"</span></span>: <span class="pl-c1">29338</span>,     
-    <span class="pl-s"><span class="pl-pds">"</span>account_id<span class="pl-pds">"</span></span>: <span class="pl-c1">452981</span>,     
-    <span class="pl-s"><span class="pl-pds">"</span>uri<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>/accounts/290465/orders/1401028714/paymentinstructions<span class="pl-pds">"</span></span>,     
-    <span class="pl-s"><span class="pl-pds">"</span>action<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>view<span class="pl-pds">"</span></span>,     
-    <span class="pl-s"><span class="pl-pds">"</span>url<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>https://app.armorpayments.com/accounts/290465/orders/1401028714/paymentinstructions?action=view&amp;user_auth_token=fa7c6352d60b2128b91767ee5b6a32e7<span class="pl-pds">"</span></span>,     
-    <span class="pl-s"><span class="pl-pds">"</span>created<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2014-07-21T22:26:52-05:00<span class="pl-pds">"</span></span>,     
-    <span class="pl-s"><span class="pl-pds">"</span>expires<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2014-07-21T23:26:52-05:00<span class="pl-pds">"</span></span> 
+<div class="highlight highlight-source-js"><pre>{     
+    <span class="pl-s"><span class="pl-pds">"</span>user_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">29338</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>account_id<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">452981</span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>uri<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>/accounts/290465/orders/1401028714/paymentinstructions<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>action<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>view<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>url<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>https://app.armorpayments.com/accounts/290465/orders/1401028714/paymentinstructions?action=view&amp;user_auth_token=fa7c6352d60b2128b91767ee5b6a32e7<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>created<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>2014-07-21T22:26:52-05:00<span class="pl-pds">"</span></span>,     
+    <span class="pl-s"><span class="pl-pds">"</span>expires<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>2014-07-21T23:26:52-05:00<span class="pl-pds">"</span></span> 
 }</pre></div>
 
 <p>Use the returned URL to display an iFrame to the user. As mentioned in the earlier section, you need to display the iFrame using javascript on Payoneer server &amp; not self host it.</p>
 
-<p><strong>What buyer does in the Payoneer iFrame?</strong></p>
-
-<p>Buyer can transfer funds into escrow using Bank Transfer(ACH), Domestic or International Wire, Electronic Check, Credit Card. Payment methods will be enabled for the buyer based on the eligibility criteria below...</p>
+<p><strong>What buyer does in the Payoneer iFrame?</strong><br>
+Buyer can transfer funds into escrow using Bank Transfer(ACH), Domestic or International Wire, Electronic Check, Credit Card. Payment methods will be enabled for the buyer based on the eligibility criteria below...</p>
 
 <ul>
 <li>Credit Card will be enabled only for escrow orders less than or equal to $2000</li>
 <li>Domestic Wire transfer &amp; Electronic Check will be enabled only for US buyers</li>
 <li>International Wire Transfer will be enabled for non-US buyers.</li>
 </ul>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/jai2010">jai2010</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jai2010/Escrow-Marketplace_integration">Payoneer Escrow Payments</a> is maintained by <a href="https://github.com/jai2010">jai2010</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
